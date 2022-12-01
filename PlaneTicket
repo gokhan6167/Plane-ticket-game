@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define MAXSEATS 10
+void printPass( int );
+int assignFirstClassSeat( int [] );
+int assignEconomySeat( int [] );
+int acceptAlternative( const char* );
+
+
+
+int main()
+{
+    int a[5] = {1,2,3,4,5};
+    int c=0;
+    int seat=0;
+     int d=0;
+    int b[5] = {6,7,8,9,10};
+    int total[MAXSEATS]={};
+    do{printf("please type 1 for first class\n 2 for second class\n");
+    scanf("%d", &seat);
+    if(seat==1 &&c<5){
+    printf("%d\n", a[c]);
+    ++c;
+
+    }
+    if(seat==0&&d<5){
+    printf("%d\n", b[d]);
+    ++d;
+    }
+    ++seat;
+    }while(seat<=10);
+    return 0;
+}
